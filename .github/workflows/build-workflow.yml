@@ -8,7 +8,7 @@ on:
     branches: [ main ]
 
 env:
-  TEST_TAG: user/myapp:test
+  TEST_TAG: speedygamer12/electrifying-node:test
 
 jobs:
   push_to_registry:
@@ -34,6 +34,7 @@ jobs:
       
       - name: test
         run: |
+          echo $(docker images )
           docker run --rm ${{ env.TEST_TAG }} 
       
       - name: Run Snyk to check Docker images for vulnerabilities
@@ -41,7 +42,7 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          image: your/image-to-test
+          image: speedygamer12/electrifying-node:test
           args: --severity-threshold=high
        
       - name: Extract metadata (tags, labels) for Docker
