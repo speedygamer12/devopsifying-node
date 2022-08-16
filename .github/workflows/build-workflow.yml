@@ -44,9 +44,8 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           image: speedygamer12/electrifying-node:test
-          args: 
-            - "--file=Dockerfile"
-            - "--severity-threshold=high"
+          args: --file=Dockerfile
+          args: --severity-threshold=high
 
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
