@@ -1,8 +1,6 @@
 name: "Check file existence"
 
-on:
-  release:
-    types: [published]
+on: [push, pull_request]
 
 jobs:
   file_existence:
