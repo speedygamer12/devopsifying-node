@@ -1,7 +1,6 @@
 name: Publish Docker image
 
-on:
-  on: [push, pull_request]
+on: [push, pull_request]
 
 jobs:
   push_to_registry:
