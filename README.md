@@ -3,7 +3,7 @@
 <hr />
 
 > To run:
-* Clone the repository in your terminal: `git clone https://github.com/speedygamer12/devopsifying-node/edit/main/README.md`
+* Clone the repository in your terminal: `git clone https://github.com/speedygamer12/devopsifying-node`
 * Change dir to devopsifying-node directory: `cd devopsifying-node`
 * Build the Images with Docker-compose: `docker-compose up -d `
 
