@@ -1,0 +1,29 @@
+version: '2'
+services: 
+  base: 
+    image: node:lts-alpine3.16
+    volumes:
+      - .:/usr/src/service
+    working_dir: /usr/src/service
+    command: npm run dev
+    ports: 
+      - "5000:8080"
+
+  install: 
+    extends: 
+      service: base
+    command: npm i
+
+  build:
+    extends: 
+      service: base
+    command: npm run build
+  
+  create-bundles:
+    extends: 
+      service: base
+    command: npm run create-bundles
+
+volumes: 
+  nodemodules:
+    external: true
