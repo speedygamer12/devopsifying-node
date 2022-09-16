@@ -10,7 +10,7 @@ RUN npm install
 
 COPY ./ ./
 
-RUN npm run lint
+RUN npm run format
 
 RUN npm run test
 

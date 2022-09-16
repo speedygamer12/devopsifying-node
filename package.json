@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "NODE_ENV=production node server",
-    "dev": "nodemon server",
+    "dev": "nodemon server --",
     "format": "prettier-standard 'app/**/*.js' 'app/**/*.jsx' 'server/**/*.js' 'server.js'",
     "test": "cross-env NODE_ENV=test jest --testTimeout=10000",
     "prepare": "husky install"
@@ -19,7 +19,7 @@
     "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
     "nodemon": "^2.0.19",
-    "prettier-standard": "^9.1.1"
+    "prettier-standard": "^16.4.1"
   },
   "dependencies": {
     "dotenv": "^16.0.1",
@@ -27,5 +27,16 @@
     "jest": "^28.1.2",
     "morgan": "^1.10.0",
     "supertest": "^6.2.4"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write",
+      "npx eslint --fix"
+    ],
+    "ignore": [
+      "node_modules",
+      "dist",
+      "package-lock.json"
+    ]
   }
 }

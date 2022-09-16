@@ -1,3 +1,5 @@
+.PHONY dev setup install
+all dev setup
 install:
 	docker-compose -f docker-compose.builder.yml run --rm install
 
