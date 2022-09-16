@@ -5,16 +5,27 @@
   "main": "server.js",
   "scripts": {
     "start": "NODE_ENV=production node server",
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "format": "prettier-standard 'app/**/*.js' 'app/**/*.jsx' 'server/**/*.js' 'server.js'",
+    "test": "cross-env NODE_ENV=test jest --testTimeout=10000",
+    "prepare": "husky install"
   },
   "author": "Yusuf Giwa",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "cross-env": "^7.0.3",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "8.5.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "nodemon": "^2.0.19",
+    "prettier-standard": "^9.1.1"
   },
   "dependencies": {
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "morgan": "^1.10.0"
+    "jest": "^28.1.2",
+    "morgan": "^1.10.0",
+    "supertest": "^6.2.4"
   }
 }

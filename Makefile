@@ -4,3 +4,8 @@ install:
 dev:
 	docker-compose up 
 
+setup: 
+	docker volume create nodemodules
+
+  
+
