@@ -1,5 +1,6 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/eleniyan/courses/devops-nigeria/devcamper_api'
-docker-compose -f docker-compose.builder.yml run --rm install
 make: Leaving directory '/home/eleniyan/courses/devops-nigeria/devcamper_api'
  
+Makefile:1: *** missing separator.  Stop.
+

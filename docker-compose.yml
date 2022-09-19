@@ -13,12 +13,4 @@ volumes:
   nodemodules:
     external: true
 
-  # backend-api:
-  #   build: ./
-  #   command: npm run dev
-  #   ports:
-  #   - "5000:8080"
-  #   volumes:
-  #     - .:/usr/src/app
-  #     - /usr/src/app/node_modules
   
